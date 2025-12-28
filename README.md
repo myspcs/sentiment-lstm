@@ -61,6 +61,11 @@ eğitim tamamlandıktan sonra **bağımsız test seti** üzerinde nihai performa
 
 Ayrıca test seti için **Confusion Matrix** görsel olarak gösterilmiştir.
 
+### Confusion Matrix (Test Seti)
+
+![Confusion Matrix](results/confusion_matrix.png)
+
+
 ---
 
 ## 5. Proje Yapısı
@@ -74,7 +79,7 @@ sentiment_lstm/
 ├── vocab.pkl
 ├── requirements.txt
 ├── results/
-│   └── confusion_matrix_test.png
+│   └── confusion_matrix.png
 └── README.md
 
 ```
