@@ -123,7 +123,7 @@ cm = confusion_matrix(test_trues, test_preds)
 
 plt.figure(figsize=(4,4))
 plt.imshow(cm)
-plt.title("Confusion Matrix (Test)")
+plt.title("Confusion Matrix")
 plt.colorbar()
 plt.xticks([0,1], ["Negatif", "Pozitif"])
 plt.yticks([0,1], ["Negatif", "Pozitif"])

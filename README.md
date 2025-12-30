@@ -1,6 +1,6 @@
 # Türkçe Film Yorumları Duygu Analizi (LSTM)
 
-Bu projede Türkçe film yorumları üzerinde derin öğrenme tabanlı bir **duygu analizi** sistemi geliştirilmiştir. Model, verilen bir yorumun **pozitif** veya **negatif** olduğunu tahmin etmektedir.
+Bu projede Türkçe film yorumları üzerinde derin öğrenme tabanlı bir duygu analizi sistemi geliştirilmiştir. Model, verilen bir yorumun pozitif veya negatif olduğunu tahmin etmektedir.
 
 ---
 
@@ -15,7 +15,7 @@ Bu projede Türkçe dilinde duygu analizi yapılması tercih edilmiştir çünk�
 
 ## 2. Veri Seti
 
-Projede **mteb/turkish_movie_sentiment** veri seti kullanılmıştır.
+Projede mteb/turkish_movie_sentiment veri seti kullanılmıştır.
 
 - Türkçe film yorumlarından oluşur  
 - Etiketler: `pozitif (1)` ve `negatif (0)`  
@@ -28,17 +28,17 @@ https://huggingface.co/datasets/mteb/turkish_movie_sentiment
 
 ## 3. Yöntem / Algoritma Seçimi
 
-Bu projede **LSTM (Long Short-Term Memory)** tabanlı bir sinir ağı kullanılmıştır.
+Bu projede LSTM (Long Short-Term Memory) tabanlı bir sinir ağı kullanılmıştır.
 
 ### Neden LSTM?
 - Metin verileri sıralı yapıdadır  
 - LSTM, uzun dönemli bağımlılıkları öğrenebilir  
 
 ### Karşılaştırmalı Analiz:
-- **Bag of Words / TF-IDF:** Bağlam bilgisi yok  
-- **CNN:** Yerel örüntülerde başarılı  
-- **Transformer:** Güçlü fakat karmaşık ve maliyetli  
-- **LSTM:** Performans ve sadelik dengesi sağlar  
+- Bag of Words / TF-IDF: Bağlam bilgisi yok  
+- CNN: Yerel örüntülerde başarılı  
+- Transformer: Güçlü fakat karmaşık ve maliyetli  
+- LSTM: Performans ve sadelik dengesi sağlar  
 
 Bu nedenle LSTM tercih edilmiştir.
 
@@ -46,7 +46,7 @@ Bu nedenle LSTM tercih edilmiştir.
 
 ## 4. Model Eğitimi ve Değerlendirilmesi
 
-- Veri seti **train / validation / test** olarak ayrılmıştır  
+- Veri seti train / validation / test olarak ayrılmıştır  
 - Kayıp fonksiyonu: Binary Cross Entropy  
 - Optimizasyon: Adam  
 
@@ -56,12 +56,12 @@ Bu nedenle LSTM tercih edilmiştir.
 - Recall  
 - F1-score  
 
-Model, eğitim sürecinde **epoch bazlı validation sonuçları** ile izlenmiş,  
-eğitim tamamlandıktan sonra **bağımsız test seti** üzerinde nihai performans değerlendirmesi yapılmıştır.
+Model, eğitim sürecinde epoch bazlı validation sonuçları ile izlenmiş,  
+eğitim tamamlandıktan sonra bağımsız test seti üzerinde nihai performans değerlendirmesi yapılmıştır.
 
-Ayrıca test seti için **Confusion Matrix** görsel olarak gösterilmiştir.
+Ayrıca Confusion Matrix görsel olarak gösterilmiştir.
 
-### Confusion Matrix (Test Seti)
+### Confusion Matrix
 
 ![Confusion Matrix](results/confusion_matrix.png)
 
